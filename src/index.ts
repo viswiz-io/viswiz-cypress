@@ -40,7 +40,8 @@ export default function plugin(
 
 	const [ciEnv, ciMessage] = ciEnvs();
 
-	const branch = options?.branch || ciEnv.branch;
+	// @ts-expect-error `prBranch` is not defined in all types
+	const branch = options?.branch || ciEnv.prBranch || ciEnv.branch;
 	if (!branch) {
 		warning('Branch name is not configured');
 		return;

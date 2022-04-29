@@ -32,6 +32,8 @@ describe('plugin', () => {
 		process.env.GITHUB_ACTIONS = '1';
 		process.env.GITHUB_REF = 'feature/branch';
 		process.env.GITHUB_SHA = '8829ad36b38090fb7c8ea21e98f18ce4320a819f';
+		// This allows us to define these CI vars in a stable way in PRs
+		delete process.env.GITHUB_EVENT_PATH;
 	});
 
 	test('registers after:run handler with env variables', () => {
