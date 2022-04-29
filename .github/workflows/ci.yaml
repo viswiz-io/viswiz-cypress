@@ -7,6 +7,14 @@ on:
     branches: [main]
 
 jobs:
+  context-dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
   lint:
     runs-on: ubuntu-latest
     steps:
