@@ -1,7 +1,7 @@
 {
   "name": "viswiz-cypress",
   "description": "VisWiz.io Cypress plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Valentin Agachi <valentin@viswiz.io>",
   "homepage": "https://www.viswiz.io",
   "license": "MIT",
