@@ -1,0 +1,80 @@
+{
+  "name": "viswiz-cypress",
+  "description": "VisWiz.io Cypress plugin",
+  "version": "1.0.0",
+  "author": "Valentin Agachi <valentin@viswiz.io>",
+  "homepage": "https://www.viswiz.io",
+  "license": "MIT",
+  "keywords": [
+    "visual regression testing",
+    "visual testing",
+    "automated testing",
+    "automation",
+    "testing",
+    "screenshot",
+    "cypress",
+    "viswiz"
+  ],
+  "type": "commonjs",
+  "main": "./index.js",
+  "types": "./lib/index.d.ts",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viswiz-io/viswiz-cypress"
+  },
+  "bugs": {
+    "url": "https://github.com/viswiz-io/viswiz-cypress/issues/new"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext js,ts .",
+    "prepack": "yarn build",
+    "prepare": "husky install",
+    "pretty": "prettier --write --list-different \"**/*.*s\"",
+    "release": "standard-version -a",
+    "test": "jest",
+    "test:types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.17.6",
+    "@babel/core": "7.17.9",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-typescript": "7.16.7",
+    "@types/env-ci": "3.1.1",
+    "@typescript-eslint/eslint-plugin": "5.21.0",
+    "@typescript-eslint/parser": "5.21.0",
+    "babel-jest": "28.0.2",
+    "cypress": "9.6.0",
+    "eslint": "8.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "husky": "7.0.4",
+    "jest": "28.0.2",
+    "lint-staged": "12.4.1",
+    "prettier": "2.6.2",
+    "standard-version": "9.3.2",
+    "typescript": "4.6.4",
+    "validate-commit-msg": "2.14.0"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "env-ci": "7.1.0",
+    "viswiz-sdk": "5.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "volta": {
+    "node": "14.19.1",
+    "yarn": "1.22.10"
+  }
+}

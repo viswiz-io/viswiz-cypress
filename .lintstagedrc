@@ -1,0 +1,10 @@
+{
+  "src/*.ts": [
+    "eslint --fix",
+    "prettier --write --list-different"
+  ],
+  "src/__tests__/*.ts": [
+    "eslint --fix",
+    "prettier --write --list-different"
+  ]
+}
