@@ -46,7 +46,7 @@
   "devDependencies": {
     "@babel/cli": "7.17.10",
     "@babel/core": "7.17.10",
-    "@babel/preset-env": "7.16.11",
+    "@babel/preset-env": "7.17.10",
     "@babel/preset-typescript": "7.16.7",
     "@types/env-ci": "3.1.1",
     "@typescript-eslint/eslint-plugin": "5.22.0",
