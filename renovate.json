@@ -22,6 +22,11 @@
 			"groupName": "Skip major Node.js versions",
 			"matchPackageNames": ["@types/node", "node"],
 			"matchUpdateTypes": ["major"]
+		},
+		{
+			"enabled": false,
+			"groupName": "Skip ESM-only packages",
+			"matchPackageNames": ["chalk"]
 		}
 	],
 	"postUpdateOptions": ["yarnDedupeHighest"],
